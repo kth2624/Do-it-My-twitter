@@ -4,7 +4,7 @@ import Home from "routes/Home";
 
 const AppRouter = ({isLoggedIn}) => {
 	// console.log(setIsLoggedIn);
-	return (
+		return (
 		<Router>
 			<Switch>
 				{isLoggedIn ? (
