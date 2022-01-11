@@ -6,8 +6,16 @@ const Auth = () => {
 	const [password, setPassword] = useState("");
 	const [newAccount, setNewAccount] = useState(true);
 	const [error, setError] = useState("");
+
 	const onChange = (event) => {
-		console.log(event.target.name);
+		const {
+			target: { name, value },
+		} = event;
+		if (name === "email"){
+			setEmail(value);
+		}else if (name === "password"){
+			setPassword(value);
+		}
 	};
 
 	const onSubmit = async (event) => {
